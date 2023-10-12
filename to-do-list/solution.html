@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple To-Do List</title>
+</head>
+<body>
+    <h1>Simple To-Do List</h1>
+    <div id="taskList">
+        <ul id="tasks">
+            <!-- Tasks will be added here -->
+        </ul>
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <script>
+        const tasks = []; // Local task array
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                tasks.push(taskText); // Add task to the local array
+                displayTasks();
+                taskInput.value = '';
+            }
+        }
+
+        function removeTask(index) {
+            tasks.splice(index, 1); // Remove task from the local array
+            displayTasks();
+        }
+
+        function displayTasks() {
+            const taskList = document.getElementById('tasks');
+            taskList.innerHTML = ''; // Clear the task list
+
+            tasks.forEach((task, index) => {
+                const taskItem = document.createElement('li');
+                taskItem.innerHTML = `${task} <button onclick="removeTask(${index})">Remove</button>`;
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        // Initial display of tasks
+        displayTasks();
+    </script>
+</body>
+</html>

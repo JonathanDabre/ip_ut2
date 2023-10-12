@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <h1>Simple To do list</h1>
+    <!-- Tasks will show up here -->
+    <div class="task-list">
+        <ul class="" id="tasks">
+
+        </ul>
+        <input type="text" id="task-input" placeholder="Enter new Task">
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    
+
+    <script>
+
+        //instead of server we are use local storage for now.
+        const tasks = [];
+
+        function addTask(){
+            const taskInput = document.getElementById("task-input")
+            const taskText = taskInput.value.trim()
+
+            if(taskText !== ""){
+                tasks.push(taskText)
+
+                displayTasks();
+                taskInput.value ="";
+            }
+        }
+
+        function removeTask(index){
+            tasks.splice(index, 1);
+            displayTasks();
+        }
+
+        function displayTasks(){
+            const taskList = document.getElementById('tasks')
+
+            taskList.innerHTML = "";
+
+            tasks.forEach((task,index)=>{
+                const taskItem = document.createElement("li");
+                taskItem.innerHTML = `${task}<button onclick="removeTask(${index})">Remove</button>`;
+                taskList.appendChild(taskItem);
+            })
+        }
+
+        //Initially whatever tasks are there.
+        displayTasks();
+    </script>
+
+
+    
+</body>
+</html>
