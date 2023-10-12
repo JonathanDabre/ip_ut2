@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Polling Application</title>
+</head>
+<body>
+    <h1>Vote for Your Favorite Option</h1>
+    <div id="poll-question">What's your favorite color?</div>
+    <div id="poll-options">
+        <label><input type="radio" name="color" value="red"> Red</label>
+        <label><input type="radio" name="color" value="green"> Green</label>
+        <label><input type="radio" name="color" value="blue"> Blue</label>
+    </div>
+    <button id="vote-button">Vote</button>
+    <div id="poll-result">Vote to see the result!</div>
+
+    <script>
+        document.getElementById('vote-button').addEventListener('click', () => {
+            const selectedOption = document.querySelector('input[name="color"]:checked');
+            if (selectedOption) {
+                const color = selectedOption.value;
+                displayResult(`You voted for ${color}!`);
+            } else {
+                displayResult("Please select an option to vote.");
+            }
+        });
+
+        function displayResult(message) {
+            document.getElementById('poll-result').textContent = message;
+        }
+    </script>
+</body>
+</html>
