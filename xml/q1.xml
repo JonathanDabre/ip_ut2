@@ -1,0 +1,12 @@
+<bookstore>
+    <book>
+        <title>XML for Beginners</title>
+        <author>John Doe</author>
+        <price>19.99</price>
+    </book>
+    <book>
+        <title>Web Development with PHP</title>
+        <author>Jane Smith</author>
+        <price>24.99</price>
+    </book>
+</bookstore>
