@@ -1,0 +1,16 @@
+{
+    "bookstore": {
+        "book": [
+            {
+                "title": "XML for Beginners",
+                "author": "John Doe",
+                "price": "696969"
+            },
+            {
+                "title": "Web Development with PHP",
+                "author": "Jane Smith",
+                "price": "696969"
+            }
+        ]
+    }
+}
