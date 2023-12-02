@@ -1,0 +1,60 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.speaker {
+    margin: 20px;
+}
+
+.speaker img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+form input, form textarea, form button {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 0;
+    }
+
+    .speaker img {
+        max-width: 80px;
+    }
+}
