@@ -1,0 +1,19 @@
+<!-- .create a well formed xml documents to maintain library catalogue. It should contain the name of book, author, publisher and year of publishing, format in tabular manner using xslt -->
+<!-- xslt: eXtensible Stylesheet Language -->
+
+<libraryCatalogue>
+    <book>
+        <title>Title1</title>
+        <author>Author1</author>
+        <publisher>Publisher1</publisher>
+        <yearOfPublication>2001</yearOfPublication>
+        <price>10000</price>
+    </book>
+    <book>
+        <title>Title2</title>
+        <author>Author2</author>
+        <publisher>Publisher2</publisher>
+        <yearOfPublication>2002</yearOfPublication>
+        <price>20000</price>
+    </book>
+</libraryCatalogue>
