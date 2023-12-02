@@ -1,1 +1,6 @@
-lLorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nobis corrupti et. Accusantium voluptas assumenda incidunt eligendi. Maxime explicabo vitae quae illo corporis?
+AJAX
+AJAX is not a programming language.
+
+AJAX is a technique for accessing web servers from a web page.
+
+AJAX stands for Asynchronous JavaScript And XML.
