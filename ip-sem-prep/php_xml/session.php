@@ -40,7 +40,7 @@
     <!--just overwrite the previous ones  -->
     <?php 
 
-        $_SESSION["favcolor"] = "blue it is!!";
+        $_SESSION["favcolor"] = "blue it is!!"; //Team India and Mumbai Indians 💙
         $_SESSION['favanimal'] = "cat";
 
         print_r($_SESSION);
