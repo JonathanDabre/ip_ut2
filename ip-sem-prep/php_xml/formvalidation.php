@@ -32,10 +32,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Check if the email address is in valid format
     // filter_var() => function to check validity of a variable in php. FILTER_VALIDATE_EMAIL => validate for email
-    
+
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = "Invalid email format";
     }
 }
 ?>
 <!-- here goes the code for html form -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation in PHP</title>
+</head>
+<body>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    Name: <input type="text" name="name" value="<?php echo $name;?>">
+   
+    Email: <input type="text" name="email" value="<?php echo $email;?>">
+    
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>
