@@ -1,8 +1,8 @@
 <?php
     $cookie_name = "user";
-    $cookie_value = "abcd xyz"
+    $cookie_value = "abcd xyz";
 
-    setcookie($cookie_name, $cookie_value, time() + (60*60*24*30), '/')
+    setcookie($cookie_name, $cookie_value, time() + (60*60*24*30), '/');
     // expiry time is in seconds
 ?>
 <!-- html code kept below setcookie() -->
@@ -36,10 +36,10 @@
     <?php
         if(count($_COOKIE) > 0){
             // means there are some cookies
-            echo "cookies are enabled"
+            echo "cookies are enabled";
         }
         else{
-            echo "cookies are disabled"
+            echo "cookies are disabled";
         }
     ?>
 
