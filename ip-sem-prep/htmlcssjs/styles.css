@@ -1,0 +1,18 @@
+body {
+    background-image: url("img1.jpg");
+}
+
+th{
+    background-color: red;
+}
+
+.p1{
+    background-color: greenyellow;
+}
+.p2{
+    background-color: aqua;
+}
+
+a{
+    text-decoration: none;
+}
