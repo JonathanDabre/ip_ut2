@@ -1,7 +1,7 @@
 <?php
 // Define variables to store user input and error messages
 $name = "";
-$nameErr = "";
+$email = "";
 
 // Function to sanitize and validate input
 function sanitizeInput($data) {
