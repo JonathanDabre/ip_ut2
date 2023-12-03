@@ -16,7 +16,17 @@
             background-color: red;
             /* We apply above keyframe here */
             animation-name: styleOne; 
+
+            /* For how long the animation will gradually keep happenning */
             animation-duration: 4s;
+        }
+
+        .delayMe{
+            background-color: blue;
+
+            animation-name: styleOne;
+            animation-duration: 4s;
+            animation-delay: 3s;
         }
 
 
@@ -26,6 +36,11 @@
     <div class="applyOnMe">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quaerat, sequi cum modi suscipit, sed adipisci repudiandae voluptatem assumenda aperiam doloremque esse expedita.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum eveniet consectetur temporibus at ratione adipisci, minus rem, perspiciatis harum expedita voluptatibus consequuntur nulla.</p>
+    </div>
+
+    <div class="delayMe">
+        <h1>Hello What's Up!!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, possimus. Commodi, dolorem.</p>
     </div>
 </body>
 </html>
