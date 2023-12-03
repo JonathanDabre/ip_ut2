@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <div>
+            <label for="user">Email</label>
+            <input type="email"  name="email" id="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="password">Confirm Password</label>
+            <input type="password" name="conpassword" id="conpassword">
+        </div>
+        <button type="button" onclick="handleclick()">Register</button>
+        
+    </form>
+
+    <script>
+        function handleclick(){
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+            let conpassword = document.getElementById('conpassword').value
+
+            if(password !== conpassword){
+                alert("Password & Confirm password didn't match")
+            }
+            else{
+                alert("User Created")                
+            }
+        }
+    </script>
+</body>
+</html>
