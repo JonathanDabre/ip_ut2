@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form >
+            <div>
+                <label for="name">Name</label>
+                <input required id="name" type="text" name="name" id="">
+            </div>
+            <div>
+                <label for="email">email</label>
+                <input required id="email" type="text" name="email" id="">
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input required id="address" type="text" name="address">
+            </div>
+            <div>
+                <label for="dob">Date of Birth</label>
+                <input required id="date" type="date" name="date" id="">
+            </div>
+            <button type="button" onclick="handleClick()">Submit</button>
+        </form> 
+
+    </div>
+
+    <script>
+
+        function handleClick(){
+            let name = document.getElementById('name').value 
+            let email = document.getElementById('email').value
+            let address = document.getElementById('address').value
+            let date = document.getElementById('date').value
+            
+            if(!(email.includes("@") && email.includes("."))){
+                alert("Enter valid email");
+            }
+
+            let today = new Date() 
+            let dob = new Date(date)
+            let diff = today.getFullYear() - dob.getFullYear()
+        
+
+            if(diff<22){
+                alert("Age should be greater than 22")
+            }
+        }
+        
+    </script>
+</body>
+</html>
