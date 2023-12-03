@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            /* color is inherited property */
+            color:green; 
+            
+        }
+        .withBorder{
+            /* border is non-inherited property */
+            border:3px solid;
+        }
+        
+        .inheritBorder{
+            /* we convert the non-inherited property to inherited property by "inherit" keyword */
+            border: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Here we see i tag inherits the color</h1>
+        <p>
+            Lorem ipsum dolor sit amet. 
+            <i>Hi I'm Italic </i> 
+            Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+
+    <div>
+        <h2>Here we see span tag doesn't inherits the border property of div</h2>
+        <div class="withBorder">
+            Lorem ipsum dolor sit amet consectetur.
+            <span>Hello Hello Hello</span>
+        </div>
+    </div>
+
+    <div>
+        <h2>Here we use Inherit keyword to make the span tag inherit border property of div</h2>
+        <div class="withBorder">
+            Lorem ipsum dolor sit amet consectetur.
+            <span class="inheritBorder">Hello Hello Hello</span>
+        </div>
+    </div>
+
+
+</body>
+</html>
