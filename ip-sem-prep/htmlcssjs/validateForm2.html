@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <form >
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div>
+                <label for="name">Email ID</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div>
+                <label for="name">Age</label>
+                <input type="number" min="0" max="100" id="age" name="age">
+            </div>
+            <div>
+                <label for="password">Password</label><br>
+                <small>1 uppercase, 1 Digit, 1 special character, minimum length = 8</small><br>
+                <input type="password" name="password" minlength="8" id="password">
+            </div>
+            <button type="button" onclick="handleclick()">Submit</button>
+            
+        </form>
+    </div>
+
+
+    <script>
+        function handleclick(){
+            let name = document.getElementById('name').value 
+            let email = document.getElementById('email').value
+            let age = document.getElementById('age').value
+            let password = document.getElementById('password').value
+
+            function isValidName(n) {
+                const nameRegex = /^[A-Za-z]+$/;
+                return nameRegex.test(n);
+            }
+
+            function isValidPassword(psd) {
+                const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,}$/;
+                return passwordRegex.test(psd);
+            }
+
+            if(!isValidName(name)){
+                alert("Name not in proper format")
+            }
+
+            if(!(email.includes("@"))){
+                alert("Invalid email")
+            }
+
+            if( age<0 || age>100){
+                alert("Age not supported")
+            }
+
+            if(!isValidPassword(password)){
+                alert("Password not in given format")
+            }
+
+
+        }
+    </script>
+</body>
+</html>
